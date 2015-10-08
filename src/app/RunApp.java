@@ -15,7 +15,8 @@ public class RunApp {
 			StateHandler stateHandler = new StateHandler();
 			ListenForConnections listener = new ListenForConnections(stateHandler);
 			listener.start();
-			//Write loop
+			
+			//States loop
 			while(!done) {
 				//FREE STATE
 				if(stateHandler.getState().equals("FREE")) {

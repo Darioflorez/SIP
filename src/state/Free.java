@@ -24,7 +24,8 @@ public class Free extends State {
 			PrintWriter output = new PrintWriter(inviteSocket.getOutputStream(),true);
 			output.println("INVITE");
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Client no available: " + e.getMessage());
+			return this;
 		}
 		return new WaitingForTryRingingOk();
 	}
